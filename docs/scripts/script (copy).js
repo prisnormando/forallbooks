@@ -6,7 +6,7 @@ const totalPages = 10; // Ajuste este número para o total de páginas do seu ca
 for (let i = 1; i <= totalPages; i++) {
 		const page = document.createElement('div');
 		page.className = 'page';
-		page.innerHTML = `<object type="image/svg+xml" data="assets/img/pagina${i}.svg" class="img-fluid"></object>`;
+		page.innerHTML = `<object type="image/svg+xml" data="assets/img/cp1/${i}.svg"></object>`;
 		chapter.appendChild(page);
 }
 
@@ -33,9 +33,10 @@ document.body.addEventListener('click', function(e) {
 				popup.innerHTML = `
 						<h3>${clickedText}</h3>
 						<p>${dictionary[clickedText].meaning}</p>
-						<div class="ratio ratio-16x9">
-								<iframe src="${dictionary[clickedText].video}" allowfullscreen></iframe>
-						</div>
+						<video width="280" controls>
+								<source src="${dictionary[clickedText].video}" type="video/mp4">
+								Seu navegador não suporta o elemento de vídeo.
+						</video>
 				`;
 				popup.style.display = 'block';
 		} else {
