@@ -6,7 +6,7 @@ const totalPages = 10; // Ajuste este número para o total de páginas do seu ca
 for (let i = 1; i <= totalPages; i++) {
 		const page = document.createElement('div');
 		page.className = 'page';
-		page.innerHTML = `<object type="image/svg+xml" data="assets/img/pagina${i}.svg" class="img-fluid"></object>`;
+		page.innerHTML = `<object type="image/svg+xml" data="assets/img/book/cp1/${i}.svg" class="img-fluid"></object>`;
 		chapter.appendChild(page);
 }
 
